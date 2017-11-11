@@ -12,12 +12,17 @@ Java library implementing API calls at [digitalpodcast](http://www.digitalpodcas
 Stream<Podcast> podcasts = new DigitalPodcastAPI().getTopRated();
 ```
 
+### Requirements
+This library requires Java 8 or higher.
+
 ### Maven Central
 Include this project directly from Maven Central
 ```XML
-<groupId>be.ceau</groupId>
-<artifactId>digitalpodcast-api</artifactId>
-<version>${project.version}</version>
+<dependency>
+	<groupId>be.ceau</groupId>
+	<artifactId>digitalpodcast-api</artifactId>
+	<version>${project.version}</version>
+</dependency>
 ```
 
 ### GnuPG public key
