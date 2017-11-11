@@ -17,11 +17,17 @@ public class Podcast {
 		this.name = name.trim();
 		this.url = url.trim().toLowerCase(Locale.ENGLISH);
 	}
-	
+
+	/**
+	 * @return the name of this {@link Podcast}, never {@code null}
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * @return the url of this {@link Podcast}, never {@code null}
+	 */
 	public String getUrl() {
 		return url;
 	}
@@ -29,12 +35,12 @@ public class Podcast {
 	@Override
 	public String toString() {
 		return new StringBuilder()
-			.append("Podcast [name=")
-			.append(name)
-			.append(", url=")
-			.append(url)
-			.append("]")
-			.toString();
+				.append("Podcast [name=")
+				.append(name)
+				.append(", url=")
+				.append(url)
+				.append("]")
+				.toString();
 	}
 
 }
