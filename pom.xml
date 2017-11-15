@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>be.ceau</groupId>
 	<artifactId>digitalpodcast-api</artifactId>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<name>Digital Podcast API</name>
 	<description>Java client for the Digital Podcast API</description>
 	<url>https://github.com/mdewilde/digital-podcast-api</url>
@@ -185,7 +185,7 @@
 		<dependency>
 			<groupId>be.ceau</groupId>
 			<artifactId>opml-parser</artifactId>
-			<version>0.1.1</version>
+			<version>1.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

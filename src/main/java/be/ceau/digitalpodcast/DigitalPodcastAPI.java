@@ -9,11 +9,11 @@ import java.util.stream.Stream;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.xmlpull.v1.XmlPullParserException;
 
-import be.ceau.opml.Opml;
-import be.ceau.opml.Outline;
-import be.ceau.opml.Parser;
+import be.ceau.opml.OpmlParseException;
+import be.ceau.opml.OpmlParser;
+import be.ceau.opml.entity.Opml;
+import be.ceau.opml.entity.Outline;
 
 public class DigitalPodcastAPI {
 
@@ -148,7 +148,7 @@ public class DigitalPodcastAPI {
 
 			try (InputStream in = url.openConnection().getInputStream()) {
 
-				Opml opml = new Parser().parse(in);
+				Opml opml = new OpmlParser().parse(in);
 
 				return opml.getBody()
 						.getOutlines()
@@ -157,7 +157,7 @@ public class DigitalPodcastAPI {
 
 			}
 
-		} catch (XmlPullParserException | IOException e) {
+		} catch (OpmlParseException | IOException e) {
 			logger.error("read(String {})", link, e);
 		}
 
